@@ -17,6 +17,11 @@ def check_email(ciag_znakow: str):
     return re.match(pattern, ciag_znakow)
 
 
+def cenzuruj(tekst: str):
+    pattern = r"dup[a-ząęi]e"
+    return re.sub(pattern, 'pośladki', tekst)
+
+
 if __name__ == '__main__':
-    adres = '192.168.255.255'
-    print(check_ip(adres))
+    # tekst =
+    # print(cenzuruj(tekst))
